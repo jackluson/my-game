@@ -12,7 +12,7 @@
 
 > 链接地址--https://jackluson.github.io/my-game/%E4%BA%94%E5%AD%90%E6%A3%8B/
 
-![](.\screenshots\game1.png)
+![](./screenshots/game1.png)
 
 
 
@@ -20,7 +20,7 @@
 
 > 链接地址--https://jackluson.github.io/my-game/%E5%A8%83%E5%A8%83%E6%9C%BA/
 
-![](.\screenshots\game2.png)
+![](./screenshots/game2.png)
 
 
 
@@ -28,7 +28,7 @@
 
 > 链接地址--https://jackluson.github.io/my-game/%E8%B4%AA%E5%A9%AA%E7%9A%84%E8%9B%87/
 
-![](.\screenshots\game3.png)
+![](./screenshots/game3.png)
 
 
 
@@ -36,7 +36,7 @@
 
 > 链接地址--https://jackluson.github.io/my-game/%E8%80%81%E8%99%8E%E6%9C%BA/
 
-![](.\screenshots\game4.png)
+![](./screenshots/game4.png)
 
 
 
