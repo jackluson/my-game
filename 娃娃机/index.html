@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="x-rim-auto-match" content="none">
+  <meta name="viewport" content="initial-scale=1, minimum-scale=1 maximum-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!--   <script src="http://cdn.jsdelivr.net/npm/eruda"></script> -->
+  <script src="./static/js/jquery.js"></script>
+  <!--  <script>eruda.init();</script> -->
+  <title>Game 娃娃机</title>
+</head>
+
+<body>
+  <div class="content">
+    <div class="winner-wrap">
+      <div class="container ovh">
+        <ul class="winner-list">
+        </ul>
+      </div>
+    </div>
+    <div class="container">
+      <div class="game fl">
+        <div class="game-wrapper">
+            <div class="game-stage">
+              <div class="game-tool">
+                <div class="game-clip "></div>
+              </div>
+              <div class="game-prize">
+                <ul class="prizes-list">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+              <div class="game-over">
+                <img class="game-win-prize" src="/static/images/game4/1.png">
+                <p>恭喜您！获得</p>
+              </div>
+          </div>
+         
+        </div>
+        <div class="game-mask">
+           <a class="game-start" href="javascript:;">开始</a>
+           <p>已抽 3 次 剩余0次</p>
+        </div>
+      </div>
+      <div class="modal-info fr">
+        <div class="modal-box ">
+          <h2 class="modal-title">中奖名单
+            <a class="fr" href="javascript:;">查看我的奖品></a>
+          </h2>
+          <div class="modal-bd">
+            <ul class="winner-small-list">
+              <li>
+                <img>
+                <span>抽到了</span>
+                <span class="ml20">20积分</span>
+                <span class="fr"> 9-11 12:00</span>
+              </li>
+              <li>
+                <img>
+                <span>抽到了</span>
+                <span class="ml20">20积分</span>
+                <span class="fr"> 9-11 12:00</span>
+              </li>
+              <li>
+                <img>
+                <span>抽到了</span>
+                <span class="ml20">20积分</span>
+                <span class="fr"> 9-11 12:00</span>
+              </li>
+              <li>
+                <img>
+                <span>抽到了</span>
+                <span class="ml20">20积分</span>
+                <span class="fr"> 9-11 12:00</span>
+              </li>
+              <li>
+                <img>
+                <span>抽到了</span>
+                <span class="ml20">20积分</span>
+                <span class="fr"> 9-11 12:00</span>
+              </li>
+              <li>
+                <img>
+                <span>抽到了</span>
+                <span class="ml20">20积分</span>
+                <span class="fr"> 9-11 12:00</span>
+              </li>
+              <li>
+                <img>
+                <span>抽到了</span>
+                <span class="ml20">20积分</span>
+                <span class="fr"> 9-11 12:00</span>
+              </li>
+              <li>
+                <img>
+                <span>抽到了</span>
+                <span class="ml20">20积分</span>
+                <span class="fr"> 9-11 12:00</span>
+              </li>
+              <li>
+                <img>
+                <span>抽到了</span>
+                <span class="ml20">20积分</span>
+                <span class="fr"> 9-11 12:00</span>
+              </li>
+              <li>
+                <img>
+                <span>抽到了</span>
+                <span class="ml20">20积分</span>
+                <span class="fr"> 9-11 12:00</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="modal-box modal-note">
+          <h2 class="modal-title">抽奖说明
+          </h2>
+          <div class="modal-bd">
+            <ol class="modal-rule"></ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="text-align:center;color: #fff;"><h3>感谢 GitHub Pages 全力驱动</h3><a href="https://github.com/jackluson/my-game">GitHub Address</a></div>
+  <script src="./static/scripts/game-common.js"></script>
+  <script src="./static/scripts/crane-machine.js"></script>
+  <script>
+    console.log(Game)
+  $(function() {
+
+    var prizes = [
+      { img: "/static/images/game/1.png", name: "耳机" }, 
+      { img: "/static/images/game/2.png", name: "耳机" }, { img: "/static/images/game/3.png", name: "耳机" }, { img: "/static/images/game/10.png", name: "耳机" }]
+    Game.init({ prizes: prizes })
+    $(".game-start").click(function() {
+      //Game.reset()
+      Game.start(function(result) {
+        setTimeout(function() {
+          //$(".game-mask").hide();
+          result(0)
+        }, 1000)
+      }).end(function(res) {
+        console.log('中奖了')
+      })
+
+    })
+
+    var rules = ['在积分抽奖栏目选择喜欢的商品，先进入商品页查看详细的商品介绍',
+      '使用积分参与抽奖，抽奖后会产生一个抽奖序号，是否中奖以此为依据在参与抽奖的人数达到抽奖上限时，即抽奖完毕',
+      '抽奖完毕后的第二天早上9点系统会自动开奖（周六、周日不开奖，周五周六结束的抽奖在下周一开奖）',
+      '开奖后，中奖用户请进我的积分抽奖填写收货信息',
+      '本站会在2个工作日内向商品提供商家下订单，由商家安排发货',
+      '当您收到货请在我的积分抽奖确认收货'
+    ]
+
+    initWinners([{ title: 'tests' }, { title: 'tests' }, { title: 'tests' }, { title: 'tests' }, { title: 'tests' }, { title: 'tests' }, { title: 'tests' }, { title: 'tests' }])
+    initRule(rules)
+
+    new Trundle({ $ele: $(".winner-small-list"), direction: 'Y' })
+    new Trundle({ $ele: $(".winner-list"), direction: 'X', limit: 5 });
+
+    // $(".game-clip").addClass("game-clip--running")
+    // setTimeout(function(){
+    //    $(".game-clip").addClass('game-clip--paused');
+    // },4100)
+
+  })
+  </script>
+</body>
+
+</html>

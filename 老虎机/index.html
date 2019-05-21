@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <script src="./static/js/jquery.js"></script>
+  <title>Game 老虎机</title>
+</head>
+
+<body>
+  <div class="content">
+    <div class="game">
+      <div class="game-winner">
+        <label for="">中奖名单：</label>
+        <ul class="tl winner-list fr">
+          <li>
+            <img width="22" height="22" alt="">
+            <span>抽到了    20积分    </span>
+            <span class="fr"> 9-11 12:00</span>
+          </li>
+          <li>
+            <img width="22" height="22" alt="">
+            <span>抽到了   200积分    </span>
+            <span class="fr"> 9-11 12:00</span>
+          </li>
+          <li>
+            <img width="22" height="22" alt="">
+            <span>抽到了    700积分    </span>
+            <span class="fr"> 9-11 12:00</span>
+          </li>
+        </ul>
+      </div>
+      <div class="game-wrapper">
+      <div class="game-stage">
+        <!-- <ul class="game-item">
+          <li><img src="/static/images/game/10.png" alt=""></li>
+          <li><img src="/static/images/game/10.png" alt=""></li>
+          <li><img src="/static/images/game/10.png" alt=""></li>
+        </ul>
+        <ul class="game-item">
+          <li><img src="/static/images/game/10.png" alt=""></li>
+          <li><img src="/static/images/game/10.png" alt=""></li>
+          <li><img src="/static/images/game/10.png" alt=""></li>
+        </ul>
+        <ul class="game-item">
+          <li><img src="/static/images/game/10.png" alt=""></li>
+          <li><img src="/static/images/game/10.png" alt=""></li>
+          <li><img src="/static/images/game/10.png" alt=""></li>
+        </ul> -->
+      </div>
+      </div>
+      <p class="game-tip">已抽 3 次 ， 剩余 0 次</p>
+      <div class="game-opera">
+        <a class="game-btn fl" href="javascript:;" title="名单">名单</a>
+        <a class="game-start" href="javascript:;" title="开始 GO">开始</a>
+        <a class="game-btn btn-note fr" href="javascript:;" title="说明">说明</a>
+      </div>
+      <div class="modal-info">
+        <div class="modal-box fl">
+          <h2 class="modal-title">中奖名单
+            <a class="fr" href="javascript:;">查看我的奖品></a>
+          </h2>
+          <div class="winner-wrapper">
+          <ul class="winner-small-list">
+            <li>
+                <img   width="22" height="22">
+                <span>抽到了</span>
+                <span class="ml20">20积分</span>
+                <span class="fr"> 9-11 12:00</span>
+              </li>
+              <li>
+                <img   width="22" height="22">
+                <span>抽到了</span>
+                <span class="ml20">20积分</span>
+                <span class="fr"> 9-11 12:00</span>
+              </li>
+              <li>
+                <img   width="22" height="22">
+                <span>抽到了</span>
+                <span class="ml20">20积分</span>
+                <span class="fr"> 9-11 12:00</span>
+              </li>
+              <li>
+                <img   width="22" height="22">
+                <span>抽到了</span>
+                <span class="ml20">20积分</span>
+                <span class="fr"> 9-11 12:00</span>
+              </li>
+              <li>
+                <img   width="22" height="22">
+                <span>抽到了</span>
+                <span class="ml20">20积分</span>
+                <span class="fr"> 9-11 12:00</span>
+              </li>
+              <li>
+                <img   width="22" height="22">
+                <span>抽到了</span>
+                <span class="ml20">20积分</span>
+                <span class="fr"> 9-11 12:00</span>
+              </li>
+              <li>
+                <img   width="22" height="22">
+                <span>抽到了</span>
+                <span class="ml20">20积分</span>
+                <span class="fr"> 9-11 12:00</span>
+              </li>
+
+              <li>
+                <img   width="22" height="22">
+                <span>抽到了</span>
+                <span class="ml20">20积分</span>
+                <span class="fr"> 9-11 12:00</span>
+              </li>
+              <li>
+                <img   width="22" height="22">
+                <span>抽到了</span>
+                <span class="ml20">20积分</span>
+                <span class="fr"> 9-11 12:00</span>
+              </li>
+              <li>
+                <img   width="22" height="22">
+                <span>抽到了</span>
+                <span class="ml20">20积分</span>
+                <span class="fr"> 9-11 12:00</span>
+              </li>
+          </ul>
+        </div>
+        </div>
+        <div class="modal-box fr">
+          <h2 class="modal-title">抽奖说明
+          </h2>
+          <ol class="modal-rule"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div style="text-align:center;color: #fff;"><h3>感谢 GitHub Pages 全力驱动</h3><a href="https://github.com/jackluson/my-game">GitHub Address</a></div>
+  <script src="./static/scripts/game-common.js"></script>
+  <script src="./static/scripts/slot-machine.js"></script>
+  <script>
+  $(function(argument) {
+    // body...
+    var prizes = [
+      { img: "./static/images/game/1.png", name: "手机" }, 
+      { img: "./static/images/game/2.png", name: "啥?" }, 
+      { img: "./static/images/game/3.png", name: "水杯" }, 
+      { img: "./static/images/game/10.png", name: "耳机" }]
+    var game = new Game();
+    game.initPrizeUI(prizes)
+
+    $(".game-start").click(function(res) {
+      game.start(function(result) {
+        $(".game").addClass("game-active")
+        setTimeout(function() {
+          //result(true,1);
+          result(true,1) // Game.prototype.stop 
+        }, 5000)
+
+      }).end(function(res) {
+        console.log(res)  
+         $(".game").removeClass("game-active")
+      })
+    })
+
+    var rules = ['在积分抽奖栏目选择喜欢的商品，先进入商品页查看详细的商品介绍',
+      '使用积分参与抽奖，抽奖后会产生一个抽奖序号，是否中奖以此为依据在参与抽奖的人数达到抽奖上限时，即抽奖完毕',
+      '抽奖完毕后的第二天早上9点系统会自动开奖（周六、周日不开奖，周五周六结束的抽奖在下周一开奖）',
+      '开奖后，中奖用户请进我的积分抽奖填写收货信息',
+      '本站会在2个工作日内向商品提供商家下订单，由商家安排发货',
+      '当您收到货请在我的积分抽奖确认收货'
+    ]
+
+    initRule(rules)
+
+      new Trundle({$ele:$(".winner-small-list"),direction:'Y'})
+      new Trundle({$ele:$(".winner-list"),direction:'Y',limit:1 });
+
+  })
+  </script>
+</body>
+
+</html>
